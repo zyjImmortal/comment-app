@@ -38,7 +38,16 @@ body {
   flex: 1;
 }
 
-.comment-field-input input,
+.comment-field-input input {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 5px;
+  margin-left: 13px;
+  outline: none;
+  font-size: 14px;
+  resize: none;
+  flex: 1;
+}
 .comment-field-input textarea {
   border: 1px solid #e6e6e6;
   border-radius: 3px;

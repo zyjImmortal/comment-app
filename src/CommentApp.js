@@ -4,16 +4,28 @@ import CommentInput from './CoomentInput'
 
 
 class CommnetApp extends Component {
-  
+
+  constructor(){
+    super()
+    this.state = {
+      comments:[]
+    }
+  }
+
   handleSubmitCommnet(comment){
     console.log(comment)
+    this.state.comments.push(comment)
+    console.log(this.state.comments)
+    this.setState({
+      comments:this.state.comments
+    })
   }
 
   render() {
     return (
       <div className='wrapper'>
         <CommentInput onSubmit={this.handleSubmitCommnet.bind(this)}/>
-        <CommentList />
+        <CommentList comments={this.state.comments}/>
       </div>
     );
   }
